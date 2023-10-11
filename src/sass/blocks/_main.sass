@@ -20,3 +20,28 @@
             height: 100%
             object-fit: cover
 
+.features
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(3,1fr)
+        gap: 132px
+        padding-left: 100px
+    &__item
+        &-reverse
+            padding-top: 60px
+    &__name
+        position: relative
+        max-width: 278px
+        text-align: center
+        margin-left: -100px
+        margin-top: -40px
+        font-family: $arina
+        font-size: 70px
+        line-height: 100%
+        &-bottom
+            margin-top: 0
+            margin-bottom: -37px
+    &__img
+        img
+            width: 100%
+            object-fit: cover
