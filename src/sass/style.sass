@@ -95,6 +95,8 @@ a
     line-height: 100%
     &__wide
         max-width: 688px
+    &__bright
+        color: $bright-color
     @include sm
         font-size: 80px
     @include xxs
@@ -103,6 +105,13 @@ a
 .main-text
     font-size: 18px
     line-height: 160%
+    &__wide
+        max-width: 380px
+    &__mb
+        &:not(:last-child)
+            margin-bottom: 25px
+    &__dark
+        color: $dark-color
 
 .mb-120
     margin-bottom: 120px
