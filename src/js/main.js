@@ -11,11 +11,19 @@ window.addEventListener("DOMContentLoaded", () => {
     gap: 30,
     padding: "40%",
     interval: 2000,
-    // breakpoints: {
-    //   640: {
-    //     height: "6rem",
-    //   },
-    // },
+    breakpoints: {
+      1100: {
+        height: "360px",
+        fixedWidth: "540px",
+      },
+      675: {
+        perPage: 1,
+        gap: 20,
+      },
+      // 375: {
+      //   height: "180px",
+      // },
+    },
   });
   splide.mount();
 });

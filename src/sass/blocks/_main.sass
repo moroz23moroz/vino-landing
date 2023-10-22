@@ -7,18 +7,38 @@
 
 .promo
     margin-top: -90px
+    @include sm
+        margin-top: -68px
+    @include xxs
+        margin-top: -28px
     &__wrap
         display: flex
         align-items: stretch
         justify-content: flex-end
+        @include sm
+            flex-direction: column
+            max-width: 444px
+            margin-left: auto
+        @include xxs
+            max-width: 100%
     &__info
         margin-right: 25px
         flex: 0 0 380px
+        @include sm
+            margin-right: 0
+            margin-bottom: 100px
+        @include xxs
+            margin-bottom: 70px
     &__img
-        flex: 0 0 482px
+        flex: 0 1 482px
         img
             height: 100%
             object-fit: cover
+        @include sm
+            height: 576px
+            flex: 0 1 auto
+        @include xxs
+            height: 360px
 
 .features
     &__wrap
@@ -26,9 +46,23 @@
         grid-template-columns: repeat(3,1fr)
         gap: 132px
         padding-left: 100px
+        @include md
+            gap: 104px
+        @include sm
+            grid-template-columns: 1fr
+            gap: 100px
+            padding-right: 70px
+            padding-left: 70px
     &__item
+        @include sm
+            width: 400px
+        @include xs
+            width: 268px
         &-reverse
             padding-top: 60px
+            @include sm
+                margin-left: auto
+                padding-top: 0
     &__name
         position: relative
         max-width: 278px
@@ -38,6 +72,8 @@
         font-family: $arina
         font-size: 70px
         line-height: 100%
+        @include sm
+            margin-left: -70px
         &-bottom
             margin-top: 0
             margin-bottom: -37px
@@ -48,9 +84,16 @@
 .tradition
     padding-bottom: 342px
     background: $main-color
+    @include sm
+        padding-bottom: 614px
+    @include xxs
+        padding-bottom: 140px
     &__wrap
         display: flex
         justify-content: space-between
+        @include sm
+            flex-direction: column
+            position: relative
     &__left
         margin-right: 132px
         position: relative
@@ -59,13 +102,31 @@
         padding-left: calc((100% - 1200px) / 2)
         @include md
             padding-left: 20px
+            margin-right: 70px
+        @include sm
+            position: initial
+            width: 100%
+            padding-right: 20px
         @include xxs
             padding-left: 15px
+            padding-right: 15px
     &__left-content
         width: 688px
+        @include md
+            width: 628px
+        @include sm
+            width: 100%
+    &__info
+        @include sm
+            margin-bottom: 100px
+        @include xxs
+            margin-bottom: 70px
     &__right
         @media (min-width: 1920px)
             margin-right: calc((100% - 1900px) / 2)
+        @include sm
+            margin-left: auto
+            width: 464px
     &__text
         margin-left: auto
     &__bottom
@@ -82,27 +143,51 @@
             width: 100%
             height: 100%
             object-fit: cover
+        @include sm
+            height: 514px
+        @include xxs
+            display: none
 
 .country
     padding-top: 510px
     @media (min-width: 1920px)
         padding-top: 610px
+    @include sm
+        padding-top: 200px
     &__title
         position: relative
     &__wrap
         display: flex
+        @include sm
+            flex-direction: column
     &__left
         display: flex
         flex-direction: column
         margin-right: 30px
         flex: 0 0 688px
+        @include md
+            flex: 0 0 628px
+        @include sm
+            margin-right: 0
+            margin-bottom: 100px
+            flex: 0 1 auto
+        @include xxs
+            margin-bottom: 70px
     &__img
         margin-top: -200px
         width: 55%
         margin-left: auto
+        img
+            width: 100%
+        @include sm
+            margin-top: -19%
+            width: 74%
+            margin-right: auto
     &__right
         padding-top: 360px
         align-self: flex-end
+        @include sm
+            padding-right: 0
 
 .story
     background: $main-color

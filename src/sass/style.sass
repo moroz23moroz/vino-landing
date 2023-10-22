@@ -28,8 +28,8 @@ body
     -moz-osx-font-smoothing: grayscale
     &.locked
         overflow: hidden
-    @include sm
-        font-size: 16px
+    @include xxs
+        font-size: 17px
 
 *
     box-sizing: border-box
@@ -96,6 +96,8 @@ a
     line-height: 100%
     &__wide
         max-width: 688px
+        @include xs
+            max-width: 100%
     &__bright
         color: $bright-color
     @include sm
@@ -106,8 +108,14 @@ a
 .main-text
     font-size: 18px
     line-height: 160%
+    @include xxs
+        font-size: 17px
     &__wide
         max-width: 380px
+        @include sm
+            max-width: 444px
+        @include xxs
+            max-width: 100%
     &__mb
         &:not(:last-child)
             margin-bottom: 25px
@@ -116,12 +124,20 @@ a
 
 .mb-120
     margin-bottom: 120px
+    @include sm
+        margin-bottom: 100px
+    @include xxs
+    margin-bottom: 70px
 
 .pb-200
     padding-bottom: 200px
+    @include xxs
+        padding-bottom: 140px
 
 .pt-200
     padding-top: 200px
+    @include xxs
+        padding-top: 140px
 
     .footer-text
         font-size: 18px
