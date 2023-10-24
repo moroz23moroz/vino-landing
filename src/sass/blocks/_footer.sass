@@ -1,11 +1,18 @@
 .footer
     padding-bottom: 40px
+    @include xxs
+        padding-bottom: 66px
     &__high
         display: flex
         align-items: flex-end
         @include xs
             flex-direction: column
             align-items: flex-start
+        @include xxs
+            flex-direction: column-reverse
+    &__title
+        @include xxs
+            margin-bottom: 50px
     &__logo
         margin-right: 60px
         flex: 0 0 146px
@@ -14,6 +21,9 @@
             width: 146px
             margin-right: 0
             margin-bottom: 70px
+        @include xxs
+            margin-bottom: 0
+            width: 100px
     &__low
         display: grid
         grid-template-columns: repeat(2, 300px)
@@ -23,6 +33,8 @@
             gap: 70px
         @include xs
             grid-template-columns: 444px
+        @include xxs
+            grid-template-columns: 1fr
     &__column
         display: flex
         flex-direction: column
@@ -33,6 +45,37 @@
     &__email
         margin-bottom: 10px
     &__time
+        position: relative
         margin-bottom: 60px
+        cursor: pointer
         @include xs
             margin-bottom: 40px
+        &::after
+            content: ''
+            position: absolute
+            bottom: -2px
+            left: 0
+            height: 1px
+            width: 0
+            background: $main-color
+            transition: width 0.3s ease
+        &:hover
+            &::after
+                width: 100%
+                transition: width 0.3s ease
+    &__city
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            bottom: -2px
+            width: 0
+            height: 1px
+            left: 50%
+            transform: translateX(-50%)
+            background: $main-color
+            transition: width 0.3s ease
+        &:hover
+            &::after
+                width: 100%
+                transition: width 0.3s ease

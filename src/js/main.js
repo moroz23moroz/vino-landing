@@ -5,10 +5,10 @@ window.addEventListener("DOMContentLoaded", () => {
     arrows: false,
     autoplay: true,
     perPage: 3,
+    gap: 30,
     focus: "center",
     height: "660px",
     fixedWidth: "990px",
-    gap: 30,
     padding: "40%",
     interval: 2000,
     breakpoints: {
@@ -16,13 +16,21 @@ window.addEventListener("DOMContentLoaded", () => {
         height: "360px",
         fixedWidth: "540px",
       },
-      675: {
-        perPage: 1,
+      650: {
         gap: 20,
+        padding: "20%",
+        fixedWidth: "280px",
+        height: "180px",
       },
-      // 375: {
-      //   height: "180px",
-      // },
+      450: {
+        perPage: 2,
+        focus: "none",
+      },
+      325: {
+        padding: "10%",
+        gap: 15,
+        perPage: 1,
+      },
     },
   });
   splide.mount();

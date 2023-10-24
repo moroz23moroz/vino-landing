@@ -82,6 +82,8 @@ li
 
 a
     text-decoration: none
+    transition: color 0.3s ease
+    transition: transform 0.3s ease
 
 .container
     max-width: 1240px
@@ -103,6 +105,8 @@ a
     @include sm
         font-size: 80px
     @include xxs
+        font-size: 48px
+    @include mini
         font-size: 38px
 
 .main-text
@@ -139,7 +143,13 @@ a
     @include xxs
         padding-top: 140px
 
-    .footer-text
-        font-size: 18px
-        color: $main-color
-        font-style: normal
+.footer-text
+    font-size: 18px
+    color: $main-color
+    font-style: normal
+
+a:hover
+    color: $bright-color
+    transform: scale(1.02)
+    transition: color 0.3s ease
+    transition: transform 0.3s ease
